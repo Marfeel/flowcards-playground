@@ -1,1 +1,39 @@
-.mrf-flowcards-position-fixed{position:fixed}#mrf-flowcards-wrapper{top: 0;transform: translate3d(0, 100%, 0);transition: var(--transition)}.mrf-flowcards-loader,.mrf-flowcards-loader:after{border-radius:50%;width:3em;height:3em}.mrf-flowcards-loader{margin:50px auto 0;font-size:10px;position:relative;text-indent:-9999em;border:.25em solid rgba(255,255,255,.2);border-left:.25em solid #dcdcdc;transform:translateZ(0);animation:mrf-flowcards-loader__spin 1.1s infinite linear}@keyframes mrf-flowcards-loader__spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+.mrf-flowcards-position-fixed {
+	position: fixed;
+	z-index: 2147483647;
+}
+#mrf-flowcards-wrapper {
+	top: 0;
+	transform: translate3d(0, var(--transform, 100%), 0);
+	transition: var(--transition);
+}
+amp-img.mrf-hero-element-contain img {
+	object-fit: cover;
+}
+
+.mrf-flowcards-loader,
+.mrf-flowcards-loader:after {
+	border-radius: 50%;
+	width: 3em;
+	height: 3em
+}
+
+.mrf-flowcards-loader {
+	margin: 50px auto 0;
+	font-size: 10px;
+	position: relative;
+	text-indent: -9999em;
+	border: .25em solid rgba(255, 255, 255, .2);
+	border-left: .25em solid #dcdcdc;
+	transform: translateZ(0);
+	animation: mrf-flowcards-loader__spin 1.1s infinite linear
+}
+
+@keyframes mrf-flowcards-loader__spin {
+	0% {
+		transform: rotate(0)
+	}
+	100% {
+		transform: rotate(360deg)
+	}
+}
